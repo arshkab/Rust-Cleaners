@@ -1,0 +1,137 @@
+# Arsh_Notes
+
+#### 2/2/2022 - 
+##### Started Research about Solana and different static analysis tools; 
+##### Set up schedule and finished weekly report
+
+#### 2/7/2022 - 
+##### Started project proposal.We defined goals and objectives; 
+##### Potential feauture could be a Github auto-update functionality that is able to send emails notifications to user; 
+##### 2 options for server usage could be AWS or DeepOcean
+
+#### 2/10/2022 - 
+##### Worked on project propsosal; 
+##### Created system design which will serve as an outline for the project; 
+##### We also found the target market for product which are developers who want to use a simple tool that will allow therm to easily secure their code;
+##### We established a baseline on what our product will try to achieve. The baseline will be used as a mission statement for our project
+
+#### 2/14/2022 -
+##### Presented our proposal presentation
+##### It is important that we highlight our target market which is the average developer
+
+               
+#### 2/21/2022 -
+##### Created interface design of the service
+##### Set up three tools: rust-code-analyzer, clippy, and carg-audit
+##### I am focused on getting Soteria and research Docker containers
+##### The goal by the end of the week is to create a basic website the allows the user to input a github url to display basic results from tools
+##### Researched SARIF, Static Analysis Results Interchange Format
+
+#### 2/23/2022 -
+##### I was able to set up docker on my enviroment and follow the basic example
+##### I found that the clippy tool uses Sarif. However, the other tools do not. It might be easier to store everything in a json file
+##### I keep running into errors with Soteria
+##### Started working on creating a bash script. 
+##### Learned how a bash script works and created a basic example
+
+#### 2/28/2022 -
+##### I created a script to run cargo-audit, rust-code-analyzer, and clippy
+##### I worked with Kipp to set up a Docker container that has all the necessary dependencies
+##### The script was able to work on the Docker container
+##### I am now focused on formatting the outputs
+##### I first need to understand the outputs to display 
+
+#### 3/02/2022 -
+##### Initial design is to show the directory of the example where the user can click on each file where the errors and warnings are highlighted
+##### Cargo audit and geiger will have seperate displays
+##### Most of the day was spent downloading the updated docker image to display the results
+##### The results from each tool will be stored in a single JSON file
+
+#### 3/07/2022 -
+##### I worked on the scripts to ensure that works for different edge cases
+##### Created another script to find the output file, so a file that interprets the results can be run
+##### This will need to be added to server.js to properly display the results to the frontend
+##### Created the template for the CDR report and presentation
+
+#### 3/09/2022 -
+##### I added a checkbox template that will allow the user to choose which tool they want to run
+##### I created a function the prints out cargo audit to the website
+##### The result needs to be correctly formatted, so it is readable for the user
+##### Updated server.js to allow for the two bash scripts to run
+
+#### 3/21/2022 -
+##### We presented our criticical design review
+##### We spent most of the time setting up the demo to ensure we have a good presentation
+##### We were able to set up functionalities for the demo, but it is clear we need to focus on front end design a lot more
+##### Decided to take a break until Wednesday due to how much work we put in the previous day to put together the presentation
+
+#### 3/23/2022 -
+##### I was tasked with working on the checkbox and helping Olivia with the frontend
+##### Since I was unfamiliar with frontend, I spent time understaing how our elements connect
+##### I also researched the basics of Javascript, so I can impement the checkbox and better help with frontend
+
+#### 3/28/2022 -
+##### Today, we worked together to discuss the checkbox functionality
+##### I was unable to finish the element, so we discussed how to complete it
+##### We set up different tasks for each team member to work on
+##### Most of today was commmunicating on what the progress is like in relative to our deadline
+
+#### 3/30/2022 -
+##### I spent most of the time trying to set up the navigation menu
+##### Creating the menu gave me experience in setting up a router; I tried using a BrowserRouter and withRouter and both of them failed to work
+##### I found success with the HashRouter and ended up putting the navigation menu
+##### We sketched out a design for the home page
+##### The home page will have a navbar and have a description of the service as well as a purpose statement; Below that will be the URL and file upload buttons as well as the checkbox for tools
+##### This will navigate to another pages that displays the file tree on the left and the results on the right
+
+#### 4/04/2022 -
+##### I spent the day fixing the routing pages to display results for an input subpage and a results page.
+##### We displayed our demo in our weekly meeting. We need to focus on creating our core functionalities since we only have three weeks left.
+##### We split up our tasks for the week. I am tasked with creating automatted emails.
+##### I have decided to use AWS Simple Email Service and Workmail for the emails.
+
+#### 4/06/2022 -
+##### I bought the domain for our website: rustcleaner.net.
+##### In addition, I setup Route 56 and DNS for our domain.
+##### Then, I set up identities for our emails and created a Workmail account and credentials.
+##### The rest of the time was spent trying to understand the SES API.
+
+#### 4/11/2022 -
+##### I helped Olivia with the zip upload and she got it to work.
+##### We split up the tasks for the week and I am in charge with finding the error in the SES API code and adding another tool.
+##### Most of time was spent downloading the latest Github Branch and seeting Amazon credentials, so I can test the code.
+
+#### 4/13/2022 -
+##### Most of the time was spent debugging an error with the Amazon SES API. The template email would not send no matter what I changed.
+##### I showed the errors to my teammates and they couldn't find it either.
+##### After a couple hours of debugging, I found the error. The Amazon SES credentials were conflicting with the DB credentials.
+
+#### 4/18/2022 -
+##### I spent time implementing Mirai, the new tool that we will be adding.
+##### I created the scripts for the tool and need to add the tool to the server.
+##### This next week, I will be focused on adding all the necessary tools and functionalities.
+
+#### 4/20/2022 -
+##### Majority of the day was spent debugging an issue for Mirai. 
+##### The output of the tool wasn't displaying which was resulting in errors on the server.
+##### I attempted to create a web scraping script that pulled the severity of the vulnerabilities on the website.
+##### I attempted to use Cheerio for Javascript, but it didn't work because the website is dynamic.
+##### I will be attempting to use Selenium instead using Python.
+##### Once I setup Mirai, I plan to install cargo-crev.
+
+#### 4/25/2022 -
+##### On Sunday, I spent most of the time getting Mirai to load adn run properly on the back-end.
+##### Once added to the back-end, I started to work on the front-end for Mirai.
+##### Next, I worked on the loading button and outputting a sent email message once an email is entered.
+##### Finally, I worked on the documentation page and recorded the demo video.
+##### Today, we presented the demo video to the class.
+
+#### 4/27/2022 -
+##### Most of the time today was spent startting on the slides and the report that was due next week.
+##### In our weekly meeting with the professor, we decided which slides need to be cut and which ones need to stay.
+##### We switched our slide deck to look more professional.
+
+#### 5/02/2022 -
+##### Half the members worked on finshing the slides, while the other half worked on the hosting.
+##### Hosting has been an issue because it is difficult to upload a docker image with the size of our container.
+##### We split up the slides and got ready for the presentation.

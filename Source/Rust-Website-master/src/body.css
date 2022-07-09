@@ -1,0 +1,229 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+:root {
+	/* Base font size */
+	font-size: 16px;
+
+	/* Heading height variable*/
+	--heading-height: 12em;
+}
+
+body {
+	font-family: "Roboto", Arial, sans-serif;
+	min-height: 100vh;
+	background-color: #1d1c21;
+	color: white;
+}
+
+header {
+	position: relative;
+	width: 100%;
+	height: var(--heading-height);
+}
+
+/* Create angled background with 'before' pseudo-element
+TODO:
+-Replace header with navbar that has name & icon in it instead 
+-STETCH UI: Add something for toggling between themes?
+-Use header with logo in About page
+*/
+
+header::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: -5em;
+	width: 100%;
+	height: calc(var(--heading-height) + 0em);
+	z-index: -1;
+	transform: skewY(-3.5deg);
+	background: 
+		linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+		url(https://images.unsplash.com/photo-1495464101292-552d0b52fe41?auto=format&fit=crop&w=1350&q=80) no-repeat center,
+		linear-gradient(#4e4376, #2b5876);
+	background-size: cover;
+	border-bottom: .2em solid white;
+}
+
+h1 {
+	font-size: calc(2.8em + 2.6vw);
+	font-weight: 700;
+	letter-spacing: .01em;
+	padding: rem 0 0 4.5rem;
+	text-shadow: .022em .022em .022em #2196f3;
+	color: #fff;
+	text-align:center;
+}
+h2.one{
+    color: white;
+    text-align: center;
+	font-weight: bold;
+}
+ol.one{
+   
+    text-align: center;
+	
+}
+li.one{
+   
+	text-align: 'center';
+  
+	
+}
+h3{
+    color: white;
+    text-align: center;
+}
+h3{
+    color: white;
+    text-align: left;
+}
+
+h3.two{
+    color: white;
+    text-align: center;
+}
+
+main {
+	padding-top:0em;
+}
+
+p {
+
+	color: #fcfcfc;
+}
+p.two{
+	color: black;
+	font-size: 20px;
+
+
+}
+
+.line-break{
+    white-space: pre-wrap;
+
+}
+
+custom-icon {
+	background-image : url("./images/logo.png");
+}
+
+/* Resizable columns for results */
+.splitter {
+	width: 100%;
+	height: 92vh;
+	display: flex;
+}
+
+#tree {
+	width: 25%;
+	height: 100%;
+	min-width: 10px;
+	background-color: white;
+	overflow-y: auto;
+}
+
+#codeblocks {
+	width: 75%;
+	height: 100%;
+	min-width: 10px;
+	overflow-y: auto;
+}
+
+#separator {
+	cursor: col-resize;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 5px;
+	height: 100%;
+	background-color:#40b5f6;
+
+	/* Prevent the browser's built-in drag from interfering */
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#side_menu {
+	width: 4%;
+	height: 100%;
+}
+
+.side_icon {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.active {
+	width: 100%;
+	height: 92vh;
+	display: flex;
+}
+
+.unactive {
+	width: 100%;
+	height: 92vh;
+	display: none;
+}
+
+.file-placeholder {
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translateY(-50%);
+	font-size: 25px;
+	font-family: monospace;
+	font-weight: bold;
+} 
+
+#warningAccordion { text-align: left }
+
+#warnings {
+	width: 85%;
+	white-space: pre-wrap;
+	overflow-y: auto;
+	height: 100%;
+	min-width: 10px;
+	background-color: white;
+}
+
+.info-page {
+	height: 92vh;
+	overflow-y: auto;
+}
+
+#packages {
+	white-space: pre-wrap;
+	overflow-y: auto;
+	height: 100%;
+	width: 96vw;
+}
+
+#analysis-summary {
+	width: 15%;
+	height: 100%;
+	min-width: 10px;
+	overflow-y: auto;
+	font-size: 20px;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+.sus-box {
+	font-size: 25px;
+	display: table; /* keep the background color wrapped tight */
+	margin: 0px auto 0px auto; /* keep the table centered */
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: white;
+  background: grey;
+	line-height: 1.5;
+}
+
+h5 {
+	display:inline-block;
+	margin-right:10px;
+}
